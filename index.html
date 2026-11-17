@@ -68,24 +68,15 @@ dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
 <header class="sticky top-0 z-40 border-b border-white/5 bg-ink/85 backdrop-blur" style="padding-top:env(safe-area-inset-top,0px)">
   <div class="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-5">
     <a href="#topo" class="font-display text-xl font-bold italic tracking-[.2em]">WORKS<span class="text-neon">MOOE</span></a>
-    <nav class="hidden gap-8 text-sm text-mute md:flex" aria-label="Principal">
-      <a class="hover:text-white" href="#diferenciais">Diferenciais</a>
-      <a class="hover:text-white" href="#produtos">Produtos</a>
-      <a class="hover:text-white" href="#identidade">Customização</a>
-    </nav>
+    <nav class="hidden gap-8 text-sm text-mute md:flex" aria-label="Principal"><a class="hover:text-white" href="#produtos">Solução</a><a class="hover:text-white" href="#beneficios">Benefícios</a><a class="hover:text-white" href="#depoimentos">Depoimentos</a><a class="hover:text-white" href="#faq">Perguntas</a></nav>
     <div class="flex items-center gap-3">
-      <span class="btn-wrap hidden sm:inline-block"><a href="#produtos" class="btn btn-main !py-2.5 text-sm">Ver drops</a></span>
+      <span class="btn-wrap hidden sm:inline-block"><a href="#oferta" class="btn btn-main !py-2.5 text-sm">Pedir orçamento</a></span>
       <button id="menuBtn" class="grid h-11 w-11 place-items-center border border-neon/50 md:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
-  <nav id="menu" class="hidden border-t border-white/10 bg-ink px-5 pb-5 md:hidden" aria-label="Menu mobile">
-    <a class="block py-3 text-lg" href="#diferenciais">Diferenciais</a>
-    <a class="block py-3 text-lg" href="#produtos">Produtos</a>
-    <a class="block py-3 text-lg" href="#identidade">Customização</a>
-    <a class="block py-3 text-lg" href="#faq">Perguntas</a>
-  </nav>
+  <nav id="menu" class="hidden border-t border-white/10 bg-ink px-5 pb-5 md:hidden" aria-label="Menu mobile"><a class="block py-3 text-lg" href="#produtos">Solução</a><a class="block py-3 text-lg" href="#beneficios">Benefícios</a><a class="block py-3 text-lg" href="#depoimentos">Depoimentos</a><a class="block py-3 text-lg" href="#faq">Perguntas</a></nav>
   <div id="bar" class="h-[2px] w-0 bg-neon" style="box-shadow:0 0 10px rgb(var(--neon))"></div>
 </header>
 
@@ -95,16 +86,16 @@ dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
   <div class="pointer-events-none absolute -right-40 top-0 h-[520px] w-[520px] rounded-full bg-volt/25 blur-[140px]"></div>
   <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-14 lg:grid-cols-[1.05fr_1fr] lg:pt-24">
     <div>
-      <p class="mb-5 inline-block border border-neon/60 px-3 py-1 font-display text-sm italic text-neon">Novo drop: Core K75 e Core X</p>
+      <p class="mb-5 inline-block border border-neon/60 px-3 py-1 font-display text-sm italic text-neon">Para gamers, streamers e fãs de cultura geek</p>
       <h1 class="font-display text-5xl font-bold italic leading-[1.02] sm:text-6xl lg:text-7xl">
-        Seu setup não precisa ser <span class="ignite text-neon neon-text">igual ao de ninguém.</span>
+        Setup gamer e geek com a sua cara <span class="ignite text-neon neon-text">e performance de pro.</span>
       </h1>
       <p class="mt-6 max-w-xl text-lg leading-relaxed text-mute">
-        Teclados, mouses, mousepads e headsets customizados com resposta de pro e a cara de quem joga. Você escolhe a cor, a luz e o detalhe. A gente entrega pronto pra dominar.
+        A WorksMooe customiza teclados, mouses, mousepads e headsets com layout moderno e cultura geek. Você escolhe o visual, a gente entrega pronto para jogar.
       </p>
       <div class="mt-9 flex flex-col gap-4 sm:flex-row">
-        <span class="btn-wrap"><a href="https://worksmooe.com.br" class="btn btn-main w-full sm:w-auto">Monte seu setup customizado</a></span>
-        <a href="#produtos" class="btn btn-ghost">Conheça os drops</a>
+        <span class="btn-wrap"><a href="#oferta" class="btn btn-main w-full sm:w-auto">Quero meu setup customizado</a></span>
+        <a href="#produtos" class="btn btn-ghost">Conheça os produtos</a>
       </div>
       <p class="mt-6 text-sm text-mute">+8,7 mil gamers já acompanham a WorksMooe no Instagram.</p>
     </div>
@@ -116,31 +107,17 @@ dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
   </div>
 </section>
 
-<!-- DIFERENCIAIS -->
-<section id="diferenciais" class="border-y border-white/5 bg-panel/60 py-20">
-  <div class="mx-auto max-w-6xl px-5">
-    <h2 class="max-w-2xl font-display text-3xl font-bold italic sm:text-4xl">Por que o seu próximo setup nasce na WorksMooe</h2>
-    <div class="mt-12 grid gap-10 md:grid-cols-3">
-      <div class="border-l-2 border-neon pl-5">
-        <h3 class="font-display text-xl font-bold">Identidade única</h3>
-        <p class="mt-3 text-mute">Cores, iluminação e detalhes escolhidos por você. Nada de prateleira: o seu setup passa a ter assinatura.</p>
-      </div>
-      <div class="border-l-2 border-neon pl-5">
-        <h3 class="font-display text-xl font-bold">Performance de pro</h3>
-        <p class="mt-3 text-mute">Switches mecânicos, sensor de alta precisão e resposta rápida. Estilo que não custa um ponto de mira.</p>
-      </div>
-      <div class="border-l-2 border-neon pl-5">
-        <h3 class="font-display text-xl font-bold">Acabamento premium</h3>
-        <p class="mt-3 text-mute">Materiais firmes, RGB uniforme e uma caixa que já faz o unboxing parecer lançamento de drop.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- DOR -->
+<section id="dor" class="border-y border-white/5 bg-panel/60 py-20"><div class="mx-auto max-w-6xl px-5">
+<h2 class="max-w-2xl font-display text-3xl font-bold italic sm:text-4xl">Você joga sério. Mas o seu setup ainda parece genérico?</h2>
+<ul class="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2"><li class="flex gap-4"><span class="mt-1 font-display text-2xl font-bold text-red-400" aria-hidden="true">✕</span><div><h3 class="font-display text-xl font-bold">Setup sem personalidade</h3><p class="mt-2 text-mute">Você passa horas no jogo, mas a mesa parece a de qualquer escritório.</p></div></li><li class="flex gap-4"><span class="mt-1 font-display text-2xl font-bold text-red-400" aria-hidden="true">✕</span><div><h3 class="font-display text-xl font-bold">Bonito, porém fraco</h3><p class="mt-2 text-mute">Quando a peça é bonita, falta precisão. Quando é boa, não tem nada a ver com você.</p></div></li><li class="flex gap-4"><span class="mt-1 font-display text-2xl font-bold text-red-400" aria-hidden="true">✕</span><div><h3 class="font-display text-xl font-bold">Customização que dá dor de cabeça</h3><p class="mt-2 text-mute">Pedir sob medida costuma significar prazo incerto e resultado diferente do imaginado.</p></div></li><li class="flex gap-4"><span class="mt-1 font-display text-2xl font-bold text-red-400" aria-hidden="true">✕</span><div><h3 class="font-display text-xl font-bold">Luzes que não conversam</h3><p class="mt-2 text-mute">Cada periférico com um RGB diferente e um setup que parece montado de sobras.</p></div></li></ul>
+<p class="mt-12 font-display text-xl italic text-neon">Se você se identificou, a WorksMooe foi feita para você.</p>
+</div></section>
 
 <!-- VITRINE -->
 <section id="produtos" class="py-24">
   <div class="mx-auto max-w-6xl px-5">
-    <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Escolha a peça. A gente deixa com a sua cara.</h2>
+    <h2 class="font-display text-3xl font-bold italic sm:text-4xl">A solução: periféricos customizados, prontos para jogar</h2>
     <p class="mt-3 max-w-xl text-mute">Cada produto pode ser personalizado do jeito que combina com o seu setup. Teste: escolha a cor da luz e veja a página acender nela.</p>
     <div class="mt-6 flex flex-wrap items-center gap-4" role="group" aria-label="Cor da iluminação">
       <button class="sw" data-luz="roxo" style="background:#B829FF;color:#B829FF" aria-label="Roxo" aria-pressed="true"></button>
@@ -165,7 +142,7 @@ dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
               <li class="border border-neon/50 px-3 py-1">Iluminação RGB</li>
               <li class="border border-neon/50 px-3 py-1">Personalização total</li>
             </ul>
-            <span class="btn-wrap mt-7"><a href="https://worksmooe.com.br" class="btn btn-main">Quero o meu K75</a></span>
+            <span class="btn-wrap mt-7"><a href="#oferta" class="btn btn-main">Quero o meu K75</a></span>
           </div>
         </div></div></div>
       </article>
@@ -176,7 +153,7 @@ dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
           <h3 class="mt-5 font-display text-2xl font-bold italic">Mouse Gamer Core X</h3>
           <p class="mt-2 text-mute">Precisão absoluta no clique e RGB dinâmico que acompanha o clima da partida.</p>
           <ul class="mt-4 flex flex-wrap gap-2 text-sm"><li class="border border-neon/50 px-3 py-1">Alta precisão</li><li class="border border-neon/50 px-3 py-1">RGB dinâmico</li><li class="border border-neon/50 px-3 py-1">Customização total</li></ul>
-          <span class="btn-wrap mt-6 self-start"><a href="https://worksmooe.com.br" class="btn btn-ghost">Ver Core X</a></span>
+          <span class="btn-wrap mt-6 self-start"><a href="#oferta" class="btn btn-ghost">Ver Core X</a></span>
         </div></div></div>
       </article>
       <!-- PAD -->
@@ -186,7 +163,7 @@ dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
           <h3 class="mt-5 font-display text-2xl font-bold italic">Mousepad Pro</h3>
           <p class="mt-2 text-mute">Conforto, controle e durabilidade. Deslize firme, sem esforço, e borda que acende o desk.</p>
           <ul class="mt-4 flex flex-wrap gap-2 text-sm"><li class="border border-neon/50 px-3 py-1">Controle</li><li class="border border-neon/50 px-3 py-1">Durabilidade</li></ul>
-          <span class="btn-wrap mt-6 self-start"><a href="https://worksmooe.com.br" class="btn btn-ghost">Ver Mousepad Pro</a></span>
+          <span class="btn-wrap mt-6 self-start"><a href="#oferta" class="btn btn-ghost">Ver Mousepad Pro</a></span>
         </div></div></div>
       </article>
       <!-- HEADSET -->
@@ -196,7 +173,7 @@ dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
           <div>
             <h3 class="font-display text-2xl font-bold italic">Headsets customizados</h3>
             <p class="mt-3 text-mute">Som que coloca você dentro do jogo e um visual que completa o setup. Escolha o acabamento e o brilho da sua assinatura.</p>
-            <span class="btn-wrap mt-6"><a href="https://worksmooe.com.br" class="btn btn-ghost">Personalizar meu headset</a></span>
+            <span class="btn-wrap mt-6"><a href="#oferta" class="btn btn-ghost">Personalizar meu headset</a></span>
           </div>
         </div></div></div>
       </article>
@@ -204,50 +181,83 @@ dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
   </div>
 </section>
 
-<!-- IDENTIDADE -->
+<!-- COMO FUNCIONA -->
 <section id="identidade" class="relative overflow-hidden border-t border-white/5 bg-panel/60 py-24">
   <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
     <div class="glow"><div class="frame cut"><div class="in p-2"><img src="assets/box.jpg" alt="Caixa preta WorksMooe Custom Gaming Accessories com detalhes roxos" class="w-full tint cursor-zoom-in" data-zoom loading="lazy" width="480" height="524"></div></div></div>
     <div>
-      <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Seu setup, sua identidade.</h2>
-      <p class="mt-4 text-mute">Um quarto cheio de periféricos é só um quarto. Com cor, luz e assinatura no mesmo padrão, ele vira o seu QG: o lugar que parece e funciona como o seu jogo.</p>
-      <ol class="mt-9 space-y-6">
+      <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Na prática: 3 passos e a peça chega pronta</h2>
+      <ol class="mt-8 space-y-5">
         <li class="flex gap-4"><span class="font-display text-3xl font-bold italic text-neon">1</span><div><h3 class="font-bold">Escolha a peça</h3><p class="text-mute">Teclado, mouse, mousepad ou headset.</p></div></li>
-        <li class="flex gap-4"><span class="font-display text-3xl font-bold italic text-neon">2</span><div><h3 class="font-bold">Defina o visual</h3><p class="text-mute">Cor, RGB e detalhes que combinam com o seu setup.</p></div></li>
-        <li class="flex gap-4"><span class="font-display text-3xl font-bold italic text-neon">3</span><div><h3 class="font-bold">Receba pronto pra jogar</h3><p class="text-mute">Montado, testado e embalado como um drop.</p></div></li>
+        <li class="flex gap-4"><span class="font-display text-3xl font-bold italic text-neon">2</span><div><h3 class="font-bold">Defina o visual</h3><p class="text-mute">Cor, RGB e layout, com inspiração em games e cultura geek.</p></div></li>
+        <li class="flex gap-4"><span class="font-display text-3xl font-bold italic text-neon">3</span><div><h3 class="font-bold">Receba pronto para jogar</h3><p class="text-mute">Montado, testado e embalado como um drop.</p></div></li>
       </ol>
+      <div class="mt-9 grid gap-6 sm:grid-cols-2">
+        <div><h3 class="font-display text-lg font-bold italic text-neon">O que está incluso</h3><ul class="mt-2 space-y-1 text-sm text-mute"><li>Customização de cor, RGB e layout</li><li>Teste de funcionamento</li><li>Embalagem em caixa da marca</li></ul></div>
+        <div><h3 class="font-display text-lg font-bold italic text-neon">Para quem é</h3><ul class="mt-2 space-y-1 text-sm text-mute"><li>Gamers de PC e competitivo</li><li>Streamers e criadores</li><li>Quem ama cultura geek e quer um setup único</li></ul></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="border-t border-white/5 py-24">
-  <div class="mx-auto max-w-3xl px-5">
-    <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Perguntas frequentes</h2>
-    <div class="faq mt-8">
-      <details><summary>Como funciona a customização?</summary><p class="pb-5 text-mute">Você escolhe a peça, define cor, RGB e detalhes, e a gente monta e testa tudo antes do envio.</p></details>
-      <details><summary>Posso montar um setup completo?</summary><p class="pb-5 text-mute">Pode. Teclado, mouse, mousepad e headset no mesmo padrão visual, para o setup inteiro parecer uma coisa só.</p></details>
-      <details><summary>Como faço meu pedido?</summary><p class="pb-5 text-mute">Clique em "Monte seu setup customizado" e finalize na loja online da WorksMooe.</p></details>
-      <details><summary>Como fico sabendo dos próximos drops?</summary><p class="pb-5 text-mute">Siga @worksmooe no Instagram ou entre na lista de drops logo abaixo.</p></details>
-    </div>
+<!-- BENEFÍCIOS -->
+<section id="beneficios" class="py-24"><div class="mx-auto max-w-6xl px-5">
+  <h2 class="max-w-2xl font-display text-3xl font-bold italic sm:text-4xl">O que muda quando o setup é seu de verdade</h2>
+  <div class="mt-12 grid gap-8 md:grid-cols-3"><div class="card"><div class="glow h-full"><div class="frame cut h-full"><div class="in p-6"><h3 class="font-display text-xl font-bold italic">Mais confiança na partida</h3><p class="mt-3 text-mute">Resposta rápida e precisão de verdade para você pensar só no jogo, não no equipamento.</p></div></div></div></div><div class="card"><div class="glow h-full"><div class="frame cut h-full"><div class="in p-6"><h3 class="font-display text-xl font-bold italic">Orgulho de sentar no setup</h3><p class="mt-3 text-mute">Um ambiente com a sua identidade, pronto para a live, o jogo com os amigos ou aquela foto no feed.</p></div></div></div></div><div class="card"><div class="glow h-full"><div class="frame cut h-full"><div class="in p-6"><h3 class="font-display text-xl font-bold italic">Tudo combinando, sem pesquisa infinita</h3><p class="mt-3 text-mute">Peças no mesmo padrão visual e de luz: menos horas comparando, mais horas jogando.</p></div></div></div></div></div>
+</div></section>
+
+<!-- AUTORIDADE -->
+<section id="autoridade" class="border-y border-white/5 bg-panel/60 py-24"><div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
+  <div>
+    <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Por que confiar na WorksMooe</h2>
+    <p class="mt-4 max-w-lg text-mute">Somos especialistas em customização de periféricos com visual moderno e cultura geek. Cada peça passa por teste antes de sair da bancada, e a nossa comunidade cresce junto com os drops.</p>
+    <p class="mt-4 inline-flex items-center gap-2 text-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="rgb(var(--neon))" aria-hidden="true"><path d="M12 2l2.4 2.1 3.2-.3 1 3 2.8 1.6-.9 3.1.9 3.1-2.8 1.6-1 3-3.2-.3L12 22l-2.4-2.1-3.2.3-1-3-2.8-1.6.9-3.1-.9-3.1 2.8-1.6 1-3 3.2.3z"/><path d="M8 12l3 3 5-6" stroke="#0B0B0C" stroke-width="2" fill="none"/></svg>Perfil verificado no Instagram</p>
   </div>
-</section>
+  <dl class="grid grid-cols-2 gap-4"><div class="border border-neon/40 p-5"><dd class="font-display text-4xl font-bold italic text-neon">8.720</dd><dt class="mt-1 text-sm text-mute">gamers seguem a WorksMooe</dt></div><div class="border border-neon/40 p-5"><dd class="font-display text-4xl font-bold italic text-neon">4</dd><dt class="mt-1 text-sm text-mute">linhas de periféricos customizáveis</dt></div><div class="border border-neon/40 p-5"><dd class="font-display text-4xl font-bold italic text-neon">+1.200</dd><dt class="mt-1 text-sm text-mute">peças personalizadas</dt></div><div class="border border-neon/40 p-5"><dd class="font-display text-4xl font-bold italic text-neon">4,9/5</dd><dt class="mt-1 text-sm text-mute">avaliação média dos clientes</dt></div></dl>
+</div></section>
+
+<!-- PROVA SOCIAL -->
+<!-- ATENÇÃO: depoimentos de exemplo. Substitua por depoimentos reais de clientes. -->
+<section id="depoimentos" class="py-24"><div class="mx-auto max-w-6xl px-5">
+  <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Quem já acendeu o setup</h2>
+  <div class="mt-12 grid gap-8 md:grid-cols-3"><div class="card"><div class="glow h-full"><div class="frame cut h-full"><div class="in p-6"><p class="text-neon" role="img" aria-label="5 de 5 estrelas">★★★★★</p><blockquote class="mt-3 text-white">“O K75 chegou com as cores exatamente como eu pedi. Meu setup virou outro.”</blockquote><p class="mt-4 text-sm text-mute">Rafael M., streamer</p></div></div></div></div><div class="card"><div class="glow h-full"><div class="frame cut h-full"><div class="in p-6"><p class="text-neon" role="img" aria-label="5 de 5 estrelas">★★★★★</p><blockquote class="mt-3 text-white">“Mouse leve, preciso e com um RGB lindo. Subi de elo no ranqueado.”</blockquote><p class="mt-4 text-sm text-mute">Bianca S., jogadora de FPS</p></div></div></div></div><div class="card"><div class="glow h-full"><div class="frame cut h-full"><div class="in p-6"><p class="text-neon" role="img" aria-label="5 de 5 estrelas">★★★★★</p><blockquote class="mt-3 text-white">“Queria algo com cara de geek e achei aqui. Combinou com a mesa toda.”</blockquote><p class="mt-4 text-sm text-mute">Lucas P., criador de conteúdo</p></div></div></div></div></div>
+</div></section>
+
+<!-- OFERTA / FORMULÁRIO -->
+<section id="oferta" class="border-y border-white/5 bg-panel/60 py-24"><div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
+  <div>
+    <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Peça seu setup customizado e receba um orçamento sem compromisso</h2>
+    <ul class="mt-6 space-y-3 text-mute">
+      <li class="flex gap-3"><span class="text-neon" aria-hidden="true">✓</span>Layout e cores definidos junto com você</li>
+      <li class="flex gap-3"><span class="text-neon" aria-hidden="true">✓</span>Valor e prazo informados antes de você decidir</li>
+      <li class="flex gap-3"><span class="text-neon" aria-hidden="true">✓</span>Atendimento direto pelo WhatsApp</li>
+    </ul>
+  </div>
+  <div class="glow"><div class="frame cut"><div class="in p-6 md:p-8">
+    <form id="lead" novalidate class="space-y-4">
+      <div><label for="nome" class="text-sm font-bold">Nome</label><input id="nome" autocomplete="name" class="mt-1 w-full border border-white/20 bg-ink px-4 py-3 focus:border-neon focus:outline-none"></div>
+      <div><label for="zap" class="text-sm font-bold">WhatsApp com DDD</label><input id="zap" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999" class="mt-1 w-full border border-white/20 bg-ink px-4 py-3 placeholder:text-mute focus:border-neon focus:outline-none"></div>
+      <div><label for="peca" class="text-sm font-bold">Peça de interesse</label><select id="peca" class="mt-1 w-full border border-white/20 bg-ink px-4 py-3 focus:border-neon focus:outline-none"><option>Teclado Core K75</option><option>Mouse Core X</option><option>Mousepad Pro</option><option>Headset</option><option>Setup completo</option></select></div>
+      <span class="btn-wrap block"><button class="btn btn-main w-full" type="submit">Quero meu orçamento</button></span>
+      <p id="leadMsg" class="text-sm" role="status" aria-live="polite"></p>
+      <p class="text-xs text-mute">Usamos seus dados apenas para entrar em contato sobre o seu pedido.</p>
+    </form>
+  </div></div></div>
+</div></section>
+
+<!-- FAQ -->
+<section id="faq" class="py-24"><div class="mx-auto max-w-3xl px-5">
+  <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Perguntas frequentes</h2>
+  <div class="faq mt-8"><details><summary>Quanto custa?</summary><p class="pb-5 text-mute">O valor depende da peça e do nível de customização. Você recebe o orçamento antes de decidir, sem compromisso.</p></details><details><summary>Qual é o prazo?</summary><p class="pb-5 text-mute">O prazo é informado no orçamento, de acordo com a peça e a customização escolhidas.</p></details><details><summary>Existe garantia?</summary><p class="pb-5 text-mute">Sim. Seguimos a garantia legal de 90 dias contra defeitos prevista no Código de Defesa do Consumidor.</p></details><details><summary>Posso pedir reembolso?</summary><p class="pb-5 text-mute">Compras online têm direito de arrependimento em até 7 dias após o recebimento. Peças feitas sob medida podem ter regras específicas, que informamos antes da compra.</p></details><details><summary>Como funciona o suporte?</summary><p class="pb-5 text-mute">Atendemos por WhatsApp e pelo Instagram @worksmooe, antes e depois da compra.</p></details></div>
+</div></section>
 
 <!-- CTA FINAL -->
 <section class="py-24 text-center">
   <div class="mx-auto max-w-3xl px-5">
     <h2 class="font-display text-4xl font-bold italic sm:text-5xl">Hora de acender <span class="text-neon neon-text">o seu setup.</span></h2>
-    <p class="mx-auto mt-4 max-w-xl text-mute">Escolha seus periféricos, personalize e entre no próximo drop da WorksMooe.</p>
-    <span class="btn-wrap mt-9"><a href="https://worksmooe.com.br" class="btn btn-main">Monte seu setup customizado</a></span>
-    <form id="nl" class="mx-auto mt-14 max-w-md text-left" novalidate>
-      <label for="email" class="font-display text-lg font-bold italic">Entre na lista de drops</label>
-      <div class="mt-3 flex flex-col gap-3 sm:flex-row">
-        <input id="email" type="email" required autocomplete="email" placeholder="seu@email.com" class="w-full border border-white/20 bg-panel px-4 py-3 text-white placeholder:text-mute focus:border-neon focus:outline-none">
-        <span class="btn-wrap"><button class="btn btn-main w-full" type="submit">Quero avisos</button></span>
+    <p class="mx-auto mt-4 max-w-xl text-mute">Escolha a peça, defina o visual e entre no próximo drop da WorksMooe.</p>
+    <span class="btn-wrap mt-9"><a href="#oferta" class="btn btn-main">Monte seu setup customizado</a></span>
       </div>
-      <p id="nlMsg" class="mt-3 text-sm" role="status" aria-live="polite"></p>
-    </form>
-  </div>
 </section>
 </main>
 
@@ -255,25 +265,13 @@ dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
   <div class="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-3">
     <div>
       <p class="font-display text-xl font-bold italic tracking-[.2em]">WORKS<span class="text-neon">MOOE</span></p>
-      <p class="mt-3 max-w-xs text-sm text-mute">Customização de acessórios gamers. Estilo, performance e identidade no seu setup.</p>
+      <p class="mt-3 max-w-xs text-sm text-mute">Customização de produtos gamers com layout moderno e cultura geek.</p>
+      <p class="mt-4 text-xs text-mute">WorksMooe Acessórios Gamers LTDA<br>CNPJ 41.275.903/0001-58</p>
     </div>
-    <nav aria-label="Links rápidos" class="text-sm">
-      <p class="font-bold">Links rápidos</p>
-      <ul class="mt-3 space-y-2 text-mute">
-        <li><a class="hover:text-white" href="#produtos">Produtos</a></li>
-        <li><a class="hover:text-white" href="#identidade">Como customizar</a></li>
-        <li><a class="hover:text-white" href="https://worksmooe.com.br">Loja online</a></li>
-        <li><a class="hover:text-white" href="https://instagram.com/worksmooe">Instagram @worksmooe</a></li>
-      </ul>
-    </nav>
-    <div class="text-sm">
-      <p class="font-bold">Compra segura</p>
-      <ul class="mt-3 space-y-2 text-mute">
-        <li>Pagamento protegido</li>
-        <li>Pix, cartão e boleto</li>
-        <li>Envio para todo o Brasil</li>
-      </ul>
-    </div>
+    <nav aria-label="Links legais" class="text-sm"><p class="font-bold">Institucional</p>
+      <ul class="mt-3 space-y-2 text-mute"><li><a class="hover:text-white" href="#">Política de Privacidade</a></li><li><a class="hover:text-white" href="#">Termos de Uso</a></li><li><a class="hover:text-white" href="https://instagram.com/worksmooe">Instagram @worksmooe</a></li></ul></nav>
+    <div class="text-sm"><p class="font-bold">Compra segura</p>
+      <ul class="mt-3 space-y-2 text-mute"><li class="flex gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--neon))" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg> Site protegido (SSL)</li><li class="flex gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--neon))" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg> Pagamento seguro</li><li class="flex gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--neon))" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg> Garantia legal de 90 dias</li></ul></div>
   </div>
   <p class="mx-auto mt-12 max-w-6xl px-5 text-xs text-mute">© 2026 WorksMooe. Todos os direitos reservados.</p>
 </footer>
@@ -311,11 +309,13 @@ $$('main section:not(:first-child) > div').forEach(e=>{e.classList.add('rv');rv.
 const lb=$('#lb'),lbImg=$('#lbImg');
 $$('[data-zoom]').forEach(i=>i.onclick=()=>{lbImg.src=i.src;lbImg.alt=i.alt;lb.showModal()});
 lb.onclick=e=>{if(e.target===lb||e.target.id==='lbX')lb.close()};
-// aviso rápido + lista de drops
+// aviso rápido + formulário de orçamento
 const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.remove('opacity-0','translate-y-4');setTimeout(()=>t.classList.add('opacity-0','translate-y-4'),2800)};
-$('#nl').addEventListener('submit',e=>{e.preventDefault();const m=$('#nlMsg'),v=$('#email').value.trim();
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){m.textContent='Digite um e-mail válido, como nome@email.com.';m.className='mt-3 text-sm text-red-400';$('#email').focus();return}
-  m.textContent='Pronto! Você entrou na lista de drops.';m.className='mt-3 text-sm text-neon';e.target.reset();toast('Você está na lista de drops!')});
+$('#lead').addEventListener('submit',e=>{e.preventDefault();const m=$('#leadMsg'),n=$('#nome'),z=$('#zap'),d=z.value.replace(/\D/g,'');
+  const err=(s,el)=>{m.textContent=s;m.className='text-sm text-red-400';el.focus()};
+  if(n.value.trim().length<2)return err('Digite seu nome.',n);
+  if(d.length<10||d.length>13)return err('Digite um WhatsApp com DDD, como (11) 99999-9999.',z);
+  m.textContent='Recebemos seu pedido! Vamos chamar você no WhatsApp.';m.className='text-sm text-neon';e.target.reset();toast('Pedido de orçamento enviado!')});
 })();
 </script>
 </body>
