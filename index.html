@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WorksMooe | Acessórios gamer customizados</title>
+<meta name="description" content="Teclados, mouses, mousepads e headsets customizados. Estilo, performance e identidade no seu setup.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,700;1,600;1,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { ink:'#0B0B0C', panel:'#131316', line:'#2a1840', neon:'rgba(var(--neon),<alpha-value>)', volt:'rgba(var(--volt),<alpha-value>)', mute:'#A1A1AA' },
+  fontFamily: { display:['"Chakra Petch"','Impact','sans-serif'], body:['Manrope','system-ui','sans-serif'] }
+}}}
+</script>
+<style>
+:root{--neon:184,41,255;--volt:157,0,255;--hue:0deg;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{background:#0B0B0C;color:#F2F2F5;font-family:Manrope,system-ui,sans-serif}
+/* cantos chanfrados, como na identidade visual */
+.cut{clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)}
+.frame{padding:1px;background:linear-gradient(135deg,rgb(var(--neon)),#3b0f63 55%,rgb(var(--neon)))}
+.frame>.in{background:#131316;height:100%;clip-path:polygon(15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%,0 15px)}
+.glow{filter:drop-shadow(0 0 14px rgba(var(--volt),.32));transition:filter .3s}
+.card:hover .glow,.card:focus-within .glow{filter:drop-shadow(0 0 22px rgba(var(--neon),.55))}
+.neon-text{text-shadow:0 0 18px rgba(var(--neon),.75),0 0 44px rgba(var(--volt),.45)}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.6rem;font:700 1rem 'Chakra Petch',sans-serif;letter-spacing:.04em;
+  clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s}
+.btn-main{background:linear-gradient(135deg,rgb(var(--volt)),rgb(var(--neon)));color:#fff}
+.btn-main::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .6s ease}
+.btn-main:hover::after{transform:translateX(120%)}
+.btn-ghost{background:rgba(var(--neon),.08);color:#E9CCFF;box-shadow:inset 0 0 0 1px rgb(var(--neon))}
+.btn-ghost:hover{background:rgba(var(--neon),.22);color:#fff}
+.btn:hover{transform:translateY(-3px)}
+.btn:active{transform:translateY(0)}
+.btn-wrap{display:inline-block;filter:drop-shadow(0 0 10px rgba(var(--volt),.45));transition:filter .25s}
+.btn-wrap:hover{filter:drop-shadow(0 0 22px rgba(var(--neon),.9))}
+a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@keyframes ignite{0%{opacity:.15;text-shadow:none}30%{opacity:1}45%{opacity:.4}60%,100%{opacity:1}}
+.ignite{animation:ignite 1.4s ease-out .2s both}
+@media (prefers-reduced-motion:reduce){.ignite{animation:none}html{scroll-behavior:auto}.btn,.btn-main::after,.glow,.btn-wrap{transition:none}}
+
+.tint{filter:hue-rotate(var(--hue));transition:filter .5s}
+.card{transition:transform .3s ease}.card:hover{transform:translateY(-4px)}
+.sw{width:2.25rem;height:2.25rem;border-radius:9999px;box-shadow:0 0 0 2px #0B0B0C,0 0 0 3px rgba(255,255,255,.25);transition:transform .2s,box-shadow .2s}
+.sw:hover{transform:scale(1.12)}
+.sw[aria-pressed=true]{box-shadow:0 0 0 2px #0B0B0C,0 0 0 4px #fff,0 0 16px currentColor}
+nav[aria-label=Principal] a{padding-bottom:4px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+nav[aria-label=Principal] a[aria-current=true]{color:#fff;border-color:rgb(var(--neon))}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;padding:1.1rem 0;font:700 1.05rem 'Chakra Petch',sans-serif}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:rgb(var(--neon));font-size:1.5rem;line-height:1;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details{border-bottom:1px solid rgba(255,255,255,.1)}
+dialog{background:transparent;border:0;padding:0;max-width:92vw;max-height:92vh;color:#fff}
+dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
+#toast{transition:opacity .3s,transform .3s}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.card,.tint,.sw{transition:none}}
+</style>
+</head>
+<body class="font-body antialiased">
+
+<header class="sticky top-0 z-40 border-b border-white/5 bg-ink/85 backdrop-blur" style="padding-top:env(safe-area-inset-top,0px)">
+  <div class="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-5">
+    <a href="#topo" class="font-display text-xl font-bold italic tracking-[.2em]">WORKS<span class="text-neon">MOOE</span></a>
+    <nav class="hidden gap-8 text-sm text-mute md:flex" aria-label="Principal">
+      <a class="hover:text-white" href="#diferenciais">Diferenciais</a>
+      <a class="hover:text-white" href="#produtos">Produtos</a>
+      <a class="hover:text-white" href="#identidade">Customização</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <span class="btn-wrap hidden sm:inline-block"><a href="#produtos" class="btn btn-main !py-2.5 text-sm">Ver drops</a></span>
+      <button id="menuBtn" class="grid h-11 w-11 place-items-center border border-neon/50 md:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="menu" class="hidden border-t border-white/10 bg-ink px-5 pb-5 md:hidden" aria-label="Menu mobile">
+    <a class="block py-3 text-lg" href="#diferenciais">Diferenciais</a>
+    <a class="block py-3 text-lg" href="#produtos">Produtos</a>
+    <a class="block py-3 text-lg" href="#identidade">Customização</a>
+    <a class="block py-3 text-lg" href="#faq">Perguntas</a>
+  </nav>
+  <div id="bar" class="h-[2px] w-0 bg-neon" style="box-shadow:0 0 10px rgb(var(--neon))"></div>
+</header>
+
+<main id="topo">
+<!-- HERO -->
+<section class="relative overflow-hidden">
+  <div class="pointer-events-none absolute -right-40 top-0 h-[520px] w-[520px] rounded-full bg-volt/25 blur-[140px]"></div>
+  <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-14 lg:grid-cols-[1.05fr_1fr] lg:pt-24">
+    <div>
+      <p class="mb-5 inline-block border border-neon/60 px-3 py-1 font-display text-sm italic text-neon">Novo drop: Core K75 e Core X</p>
+      <h1 class="font-display text-5xl font-bold italic leading-[1.02] sm:text-6xl lg:text-7xl">
+        Seu setup não precisa ser <span class="ignite text-neon neon-text">igual ao de ninguém.</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-mute">
+        Teclados, mouses, mousepads e headsets customizados com resposta de pro e a cara de quem joga. Você escolhe a cor, a luz e o detalhe. A gente entrega pronto pra dominar.
+      </p>
+      <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+        <span class="btn-wrap"><a href="https://worksmooe.com.br" class="btn btn-main w-full sm:w-auto">Monte seu setup customizado</a></span>
+        <a href="#produtos" class="btn btn-ghost">Conheça os drops</a>
+      </div>
+      <p class="mt-6 text-sm text-mute">+8,7 mil gamers já acompanham a WorksMooe no Instagram.</p>
+    </div>
+    <div class="glow">
+      <div class="frame cut"><div class="in p-2">
+        <img src="assets/mouse.jpg" alt="Mouse gamer Core X da WorksMooe com iluminação RGB roxa ao lado de um teclado" class="w-full tint" width="800" height="476">
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais" class="border-y border-white/5 bg-panel/60 py-20">
+  <div class="mx-auto max-w-6xl px-5">
+    <h2 class="max-w-2xl font-display text-3xl font-bold italic sm:text-4xl">Por que o seu próximo setup nasce na WorksMooe</h2>
+    <div class="mt-12 grid gap-10 md:grid-cols-3">
+      <div class="border-l-2 border-neon pl-5">
+        <h3 class="font-display text-xl font-bold">Identidade única</h3>
+        <p class="mt-3 text-mute">Cores, iluminação e detalhes escolhidos por você. Nada de prateleira: o seu setup passa a ter assinatura.</p>
+      </div>
+      <div class="border-l-2 border-neon pl-5">
+        <h3 class="font-display text-xl font-bold">Performance de pro</h3>
+        <p class="mt-3 text-mute">Switches mecânicos, sensor de alta precisão e resposta rápida. Estilo que não custa um ponto de mira.</p>
+      </div>
+      <div class="border-l-2 border-neon pl-5">
+        <h3 class="font-display text-xl font-bold">Acabamento premium</h3>
+        <p class="mt-3 text-mute">Materiais firmes, RGB uniforme e uma caixa que já faz o unboxing parecer lançamento de drop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VITRINE -->
+<section id="produtos" class="py-24">
+  <div class="mx-auto max-w-6xl px-5">
+    <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Escolha a peça. A gente deixa com a sua cara.</h2>
+    <p class="mt-3 max-w-xl text-mute">Cada produto pode ser personalizado do jeito que combina com o seu setup. Teste: escolha a cor da luz e veja a página acender nela.</p>
+    <div class="mt-6 flex flex-wrap items-center gap-4" role="group" aria-label="Cor da iluminação">
+      <button class="sw" data-luz="roxo" style="background:#B829FF;color:#B829FF" aria-label="Roxo" aria-pressed="true"></button>
+      <button class="sw" data-luz="ciano" style="background:#22D3EE;color:#22D3EE" aria-label="Ciano" aria-pressed="false"></button>
+      <button class="sw" data-luz="magenta" style="background:#FF2DAA;color:#FF2DAA" aria-label="Magenta" aria-pressed="false"></button>
+      <button class="sw" data-luz="verde" style="background:#4ADE80;color:#4ADE80" aria-label="Verde" aria-pressed="false"></button>
+      <button class="sw" data-luz="vermelho" style="background:#FF4646;color:#FF4646" aria-label="Vermelho" aria-pressed="false"></button>
+      <span class="text-sm text-mute">Luz atual: <strong id="luzNome" class="text-white">roxo</strong></span>
+    </div>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-2">
+      <!-- K75 -->
+      <article class="card md:col-span-2">
+        <div class="glow"><div class="frame cut"><div class="in grid items-center gap-6 p-4 md:grid-cols-[1.2fr_1fr] md:p-6">
+          <img src="assets/teclado.jpg" alt="Teclado mecânico Core K75 preto com teclas roxas e iluminação RGB" class="w-full tint cursor-zoom-in" data-zoom loading="lazy" width="900" height="429">
+          <div>
+            <p class="font-display text-sm italic text-neon">Novo drop</p>
+            <h3 class="mt-1 font-display text-3xl font-bold italic">Teclado Custom Core K75</h3>
+            <p class="mt-3 text-mute">Precisão, resposta e um visual que é a sua cara. Troque keycaps, ajuste a luz e monte o teclado do jeito que você joga.</p>
+            <ul class="mt-5 flex flex-wrap gap-2 text-sm">
+              <li class="border border-neon/50 px-3 py-1">Switches mecânicos</li>
+              <li class="border border-neon/50 px-3 py-1">Iluminação RGB</li>
+              <li class="border border-neon/50 px-3 py-1">Personalização total</li>
+            </ul>
+            <span class="btn-wrap mt-7"><a href="https://worksmooe.com.br" class="btn btn-main">Quero o meu K75</a></span>
+          </div>
+        </div></div></div>
+      </article>
+      <!-- MOUSE -->
+      <article class="card">
+        <div class="glow h-full"><div class="frame cut h-full"><div class="in flex flex-col p-4 md:p-6">
+          <img src="assets/mouse.jpg" alt="Mouse gamer Core X com RGB roxo" class="w-full tint cursor-zoom-in" data-zoom loading="lazy" width="800" height="476">
+          <h3 class="mt-5 font-display text-2xl font-bold italic">Mouse Gamer Core X</h3>
+          <p class="mt-2 text-mute">Precisão absoluta no clique e RGB dinâmico que acompanha o clima da partida.</p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm"><li class="border border-neon/50 px-3 py-1">Alta precisão</li><li class="border border-neon/50 px-3 py-1">RGB dinâmico</li><li class="border border-neon/50 px-3 py-1">Customização total</li></ul>
+          <span class="btn-wrap mt-6 self-start"><a href="https://worksmooe.com.br" class="btn btn-ghost">Ver Core X</a></span>
+        </div></div></div>
+      </article>
+      <!-- PAD -->
+      <article class="card">
+        <div class="glow h-full"><div class="frame cut h-full"><div class="in flex flex-col p-4 md:p-6">
+          <img src="assets/pad.jpg" alt="Mousepad Pro preto com borda de luz roxa e logo WorksMooe" class="w-full tint cursor-zoom-in" data-zoom loading="lazy" width="480" height="425">
+          <h3 class="mt-5 font-display text-2xl font-bold italic">Mousepad Pro</h3>
+          <p class="mt-2 text-mute">Conforto, controle e durabilidade. Deslize firme, sem esforço, e borda que acende o desk.</p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm"><li class="border border-neon/50 px-3 py-1">Controle</li><li class="border border-neon/50 px-3 py-1">Durabilidade</li></ul>
+          <span class="btn-wrap mt-6 self-start"><a href="https://worksmooe.com.br" class="btn btn-ghost">Ver Mousepad Pro</a></span>
+        </div></div></div>
+      </article>
+      <!-- HEADSET -->
+      <article class="card md:col-span-2">
+        <div class="glow"><div class="frame cut"><div class="in grid items-center gap-6 p-4 md:grid-cols-[1fr_1.2fr] md:p-6">
+          <div class="md:order-2"><img src="assets/headset.jpg" alt="Headset gamer customizado em suporte com RGB roxo diante de um monitor" class="w-full tint cursor-zoom-in" data-zoom loading="lazy" width="480" height="423"></div>
+          <div>
+            <h3 class="font-display text-2xl font-bold italic">Headsets customizados</h3>
+            <p class="mt-3 text-mute">Som que coloca você dentro do jogo e um visual que completa o setup. Escolha o acabamento e o brilho da sua assinatura.</p>
+            <span class="btn-wrap mt-6"><a href="https://worksmooe.com.br" class="btn btn-ghost">Personalizar meu headset</a></span>
+          </div>
+        </div></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- IDENTIDADE -->
+<section id="identidade" class="relative overflow-hidden border-t border-white/5 bg-panel/60 py-24">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
+    <div class="glow"><div class="frame cut"><div class="in p-2"><img src="assets/box.jpg" alt="Caixa preta WorksMooe Custom Gaming Accessories com detalhes roxos" class="w-full tint cursor-zoom-in" data-zoom loading="lazy" width="480" height="524"></div></div></div>
+    <div>
+      <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Seu setup, sua identidade.</h2>
+      <p class="mt-4 text-mute">Um quarto cheio de periféricos é só um quarto. Com cor, luz e assinatura no mesmo padrão, ele vira o seu QG: o lugar que parece e funciona como o seu jogo.</p>
+      <ol class="mt-9 space-y-6">
+        <li class="flex gap-4"><span class="font-display text-3xl font-bold italic text-neon">1</span><div><h3 class="font-bold">Escolha a peça</h3><p class="text-mute">Teclado, mouse, mousepad ou headset.</p></div></li>
+        <li class="flex gap-4"><span class="font-display text-3xl font-bold italic text-neon">2</span><div><h3 class="font-bold">Defina o visual</h3><p class="text-mute">Cor, RGB e detalhes que combinam com o seu setup.</p></div></li>
+        <li class="flex gap-4"><span class="font-display text-3xl font-bold italic text-neon">3</span><div><h3 class="font-bold">Receba pronto pra jogar</h3><p class="text-mute">Montado, testado e embalado como um drop.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="border-t border-white/5 py-24">
+  <div class="mx-auto max-w-3xl px-5">
+    <h2 class="font-display text-3xl font-bold italic sm:text-4xl">Perguntas frequentes</h2>
+    <div class="faq mt-8">
+      <details><summary>Como funciona a customização?</summary><p class="pb-5 text-mute">Você escolhe a peça, define cor, RGB e detalhes, e a gente monta e testa tudo antes do envio.</p></details>
+      <details><summary>Posso montar um setup completo?</summary><p class="pb-5 text-mute">Pode. Teclado, mouse, mousepad e headset no mesmo padrão visual, para o setup inteiro parecer uma coisa só.</p></details>
+      <details><summary>Como faço meu pedido?</summary><p class="pb-5 text-mute">Clique em "Monte seu setup customizado" e finalize na loja online da WorksMooe.</p></details>
+      <details><summary>Como fico sabendo dos próximos drops?</summary><p class="pb-5 text-mute">Siga @worksmooe no Instagram ou entre na lista de drops logo abaixo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="py-24 text-center">
+  <div class="mx-auto max-w-3xl px-5">
+    <h2 class="font-display text-4xl font-bold italic sm:text-5xl">Hora de acender <span class="text-neon neon-text">o seu setup.</span></h2>
+    <p class="mx-auto mt-4 max-w-xl text-mute">Escolha seus periféricos, personalize e entre no próximo drop da WorksMooe.</p>
+    <span class="btn-wrap mt-9"><a href="https://worksmooe.com.br" class="btn btn-main">Monte seu setup customizado</a></span>
+    <form id="nl" class="mx-auto mt-14 max-w-md text-left" novalidate>
+      <label for="email" class="font-display text-lg font-bold italic">Entre na lista de drops</label>
+      <div class="mt-3 flex flex-col gap-3 sm:flex-row">
+        <input id="email" type="email" required autocomplete="email" placeholder="seu@email.com" class="w-full border border-white/20 bg-panel px-4 py-3 text-white placeholder:text-mute focus:border-neon focus:outline-none">
+        <span class="btn-wrap"><button class="btn btn-main w-full" type="submit">Quero avisos</button></span>
+      </div>
+      <p id="nlMsg" class="mt-3 text-sm" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-white/10 bg-panel/60 pb-6 pt-14">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-3">
+    <div>
+      <p class="font-display text-xl font-bold italic tracking-[.2em]">WORKS<span class="text-neon">MOOE</span></p>
+      <p class="mt-3 max-w-xs text-sm text-mute">Customização de acessórios gamers. Estilo, performance e identidade no seu setup.</p>
+    </div>
+    <nav aria-label="Links rápidos" class="text-sm">
+      <p class="font-bold">Links rápidos</p>
+      <ul class="mt-3 space-y-2 text-mute">
+        <li><a class="hover:text-white" href="#produtos">Produtos</a></li>
+        <li><a class="hover:text-white" href="#identidade">Como customizar</a></li>
+        <li><a class="hover:text-white" href="https://worksmooe.com.br">Loja online</a></li>
+        <li><a class="hover:text-white" href="https://instagram.com/worksmooe">Instagram @worksmooe</a></li>
+      </ul>
+    </nav>
+    <div class="text-sm">
+      <p class="font-bold">Compra segura</p>
+      <ul class="mt-3 space-y-2 text-mute">
+        <li>Pagamento protegido</li>
+        <li>Pix, cartão e boleto</li>
+        <li>Envio para todo o Brasil</li>
+      </ul>
+    </div>
+  </div>
+  <p class="mx-auto mt-12 max-w-6xl px-5 text-xs text-mute">© 2026 WorksMooe. Todos os direitos reservados.</p>
+</footer>
+<dialog id="lb" aria-label="Imagem ampliada"><button id="lbX" class="absolute right-2 top-2 grid h-11 w-11 place-items-center bg-ink/80 text-2xl" aria-label="Fechar">&times;</button><img id="lbImg" class="tint max-h-[88vh] w-auto" alt=""></dialog>
+<button id="top" class="fixed bottom-6 right-5 z-40 grid h-12 w-12 place-items-center bg-volt/90 opacity-0 pointer-events-none transition-opacity" style="clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);margin-bottom:env(safe-area-inset-bottom,0px)" aria-label="Voltar ao topo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 translate-y-4 border border-neon bg-ink px-5 py-3 text-sm opacity-0" role="status"></div>
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],root=document.documentElement;
+root.classList.add('js');
+// cor da luz
+const themes={roxo:['184,41,255','157,0,255','0deg'],ciano:['34,211,238','6,182,212','-93deg'],magenta:['255,45,170','219,0,130','45deg'],verde:['74,222,128','22,163,74','-145deg'],vermelho:['255,70,70','220,20,20','80deg']};
+function setLuz(k,save){const v=themes[k]||themes.roxo;root.style.setProperty('--neon',v[0]);root.style.setProperty('--volt',v[1]);root.style.setProperty('--hue',v[2]);
+  $$('[data-luz]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.luz===k)));$('#luzNome').textContent=k;
+  if(save)try{localStorage.setItem('wm-luz',k)}catch(e){}}
+let k0='roxo';try{k0=localStorage.getItem('wm-luz')||'roxo'}catch(e){}
+setLuz(k0);$$('[data-luz]').forEach(b=>b.onclick=()=>setLuz(b.dataset.luz,true));
+// menu mobile
+const mb=$('#menuBtn'),menu=$('#menu');
+mb.onclick=()=>{const o=menu.classList.toggle('hidden')===false;mb.setAttribute('aria-expanded',String(o))};
+$$('#menu a').forEach(a=>a.onclick=()=>{menu.classList.add('hidden');mb.setAttribute('aria-expanded','false')});
+// progresso + voltar ao topo
+const bar=$('#bar'),top=$('#top');
+addEventListener('scroll',()=>{const h=root.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%';
+  const show=scrollY>600;top.classList.toggle('opacity-0',!show);top.classList.toggle('pointer-events-none',!show)},{passive:true});
+top.onclick=()=>scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+// menu ativo conforme a seção
+const links=$$('nav[aria-label=Principal] a');
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.toggleAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id)&&(a.getAttribute('aria-current')!=='true'&&a.setAttribute('aria-current','true')))}),{rootMargin:'-40% 0px -55% 0px'});
+links.forEach(a=>{const s=$(a.getAttribute('href'));if(s)spy.observe(s)});
+// entrada suave das seções
+const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}}),{threshold:.12});
+$$('main section:not(:first-child) > div').forEach(e=>{e.classList.add('rv');rv.observe(e)});
+// zoom das imagens
+const lb=$('#lb'),lbImg=$('#lbImg');
+$$('[data-zoom]').forEach(i=>i.onclick=()=>{lbImg.src=i.src;lbImg.alt=i.alt;lb.showModal()});
+lb.onclick=e=>{if(e.target===lb||e.target.id==='lbX')lb.close()};
+// aviso rápido + lista de drops
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.remove('opacity-0','translate-y-4');setTimeout(()=>t.classList.add('opacity-0','translate-y-4'),2800)};
+$('#nl').addEventListener('submit',e=>{e.preventDefault();const m=$('#nlMsg'),v=$('#email').value.trim();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){m.textContent='Digite um e-mail válido, como nome@email.com.';m.className='mt-3 text-sm text-red-400';$('#email').focus();return}
+  m.textContent='Pronto! Você entrou na lista de drops.';m.className='mt-3 text-sm text-neon';e.target.reset();toast('Você está na lista de drops!')});
+})();
+</script>
+</body>
+</html>
